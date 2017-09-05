@@ -1,5 +1,6 @@
 package com.betterbot.api.pub;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -101,5 +102,9 @@ public interface Movement {
     public void cancel();
     
     public boolean isMoving();
+    
+    public ArrayList<Vector3f> getBacktrackPath();
+    
+    public float getTurnAngle(Vector3f target);
     
 }
