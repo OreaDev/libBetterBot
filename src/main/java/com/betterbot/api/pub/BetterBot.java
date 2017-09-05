@@ -185,4 +185,8 @@ public interface BetterBot {
     
     public int random(int min, int max);
     
+    public boolean hasObject(long guid);
+    
+    public String getUIError();
+    
 }
