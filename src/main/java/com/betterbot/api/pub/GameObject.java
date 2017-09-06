@@ -4,8 +4,7 @@ import java.awt.Point;
 
 /**
  * This is the base GameObject class, all wow "things" are considered objects including players and NPCs.
- * it has various functions to get information about the object, and to interact with the object.
- * 
+ * It has various functions to get information about the object and to interact with it. * 
  * @author Orea
  */
 public interface GameObject {
@@ -20,40 +19,32 @@ public interface GameObject {
     
     /**
      * Returns the object's 2D on-screen vector
+     * 
      * @return the on-screen vector
      */
-    public Point getRenderVector();
-    
+    public Point getRenderVector();    
     
     /**
-     * Check if the object is on screen
-     * @return true if the object is on screen
+     * @return true if the object is on screen, false otherwise
      */
     public boolean isOnScreen();
     
     /**
-     * Returns the object's name.
-     * 
      * @return the object's name
      */
     public String getName();
     
     /**
-     * Returns the object's GUID.
-     * 
      * @return the object's GUID
      */
     public long getGUID();
     
     /**
-     * Return the parent GUID (object's owner)
      * @return the object's parent GUID
      */
     public long getParentGUID();
     
     /**
-     * Returns the object's distance to the player.
-     * 
      * @return the distance to the player
      */
     public float getDistance();
@@ -61,36 +52,38 @@ public interface GameObject {
     /**
      * Left clicks the object.
      * 
-     * @return if the click was successful
+     * @return true if the click was successful, false otherwise
      */
     public boolean leftClick();
     
     /**
      * Right clicks the object.
      * 
-     * @return if the click was successful
+     * @return true if the click was successful, false otherwise
      */
     public boolean rightClick();
     
     /**
      * Shift-right clicks the object.
      * 
-     * @return if the click was successful
+     * @return true if the click was successful, false otherwise
      */
     public boolean shiftRightClick();
 
     /**
-     * Returns the type id of this object.
+     * Returns the type ID of this object.
      *  3 = NPC
      *  4 = Player
      *  5 = World Object
-     * @return the type id
+     *  
+     * @return the type ID
      */
     public int getType();
     
     
     /**
      * Add a watcher to this object
+     * 
      * @param watchable the thing to watch
      * @param watcher the watcher
      */
@@ -98,13 +91,15 @@ public interface GameObject {
     
     /**
      * Remove a watcher
-     * @param watcher watcher to remove
+     * 
+     * @param watcher the watcher to remove
      */
     public void removeWatcher(Watcher watcher);
     
     /**
-     * Get this object's Unique Memory ID.
-     * @return the object's UMID, or zero if the object is no longer valid
+     * Get this object's Unique Memory ID
+     * 
+     * @return the object's UMID or 0 if the object is no longer valid
      */
     public long getUMID();
     
@@ -115,30 +110,40 @@ public interface GameObject {
     
     /**
      * Get the memory address of this object (WARNING! If you do this your scripts probably won't work cross-expansion!)
+     * 
      * @return the memory address of this object
      */
     public int getPointer();
     
     /**
      * Get the memory address of this object's extra fields (WARNING! If you do this your scripts probably won't work cross-expansion!)
+     * 
      * @return the memory address of this object's extra fields
      */
     public int getFieldPointer();
     
     /**
      * Attempt to mouse over the object
-     * @return if the mouse over was successful
+     * 
+     * @return true if the mouse over was successful, false otherwise
      */
     public boolean mouseOver();
     
     /**
-     * Check if the object is still valid (loaded)
-     * @return true if the object is valid
+     * @return true if the object is valid (loaded), false otherwise
      */
     public boolean isValid();
     
+    /**
+     * @return the time in milliseconds since the spawn of the object
+     */
     public long getAge();
     
+    /**
+     * Get if a object is busy or in use. If a chest is opened by a player the quest is busy e.g.
+     * 
+     * @return 0 if the object is not busy, something else otherwise
+     */
     public int getBusyStatus();
     
 }

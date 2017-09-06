@@ -7,11 +7,11 @@ import java.util.List;
  * This class is used to control movement of the player, including turning, path walking and pathfinding.
  * @author Orea
  */
-public interface Movement {
-    
+public interface Movement {    
     
     /**
      * Calculate paths between the nodes, stich the paths together and then walk along the result
+     * 
      * @param nodes the nodes to path and walk between
      * @param dist the minimum distance before stopping
      */
@@ -19,25 +19,47 @@ public interface Movement {
     
     /**
      * Walk along the specified path
+     * 
      * @param path the path to walk
-     * @param dist the min distance
+     * @param dist the minimum distance
      */
     public void walkPath(List<Vector3f> path, float dist);
     
-    public List<Vector3f> getPath(Vector3f from, Vector3f to);
-    
+    /**
+     * Get the path from one point to another
+     * 
+     * @param from the startposition
+     * @param to the position to path to
+     * @return a list of 3D vectors representing the path
+     */
+    public List<Vector3f> getPath(Vector3f from, Vector3f to);    
 
     /**
-     * Walk to the specified vector, within "dist."
+     * Walk to the specified vector, within "dist"
      * 
      * @param target the vector to walk to
      * @param dist the minimum distance before stopping
      */
-    public void walkTo(Vector3f target, float dist);
+    public void walkTo(Vector3f target, float dist);    
     
-    
+    /**
+     * Walk to the specified path, within "dist" and use flightpaths and boats
+     * 
+     * @param target the destination to travel to
+     * @param dist the minimum distance
+     */
     public void nodeWalkTo(Vector3f target, float dist);
+    
+    /**
+     * @deprecated The bot will handle this in a further version
+     */
+    @Deprecated
     public void enableFlightPaths(int map, int ... ids);
+    
+    /**
+     * @deprecated The bot will handle this in a further version
+     */
+    @Deprecated
     public void initNodeGraph();
     
     /**
@@ -75,15 +97,12 @@ public interface Movement {
     public static interface Check {
         
        /**
-        * Return if the current path walk should be canceled.
-        * 
-        * @return if the path walk should be canceled
+        * @return true if the path walk should be canceled, false otherwise
         */
         public boolean shouldCancel();
         
        /**
         * Runs if the path walk was canceled.
-        * 
         */
         public void cancelled();
     }
@@ -99,12 +118,29 @@ public interface Movement {
         }
     };
     
+    /**
+     * Cancel the current movement
+     */
     public void cancel();
     
+    /**
+     * @return true if the bot is moving, false otherwise
+     */
     public boolean isMoving();
     
+    /**
+     * Get a path to get some distance between a unit and the bot.
+     *  It is called for hunters if their pet has aggro
+     * 
+     * @return a list of 3D vectors representing the path
+     */
     public ArrayList<Vector3f> getBacktrackPath();
     
+    /**
+     * Get the angle (in degree) of a target compared to the bot.
+     * 
+     * @return -180 to 0 for a target on the lefthand of the bot and 0 to +180 for a target on the righthand
+     */
     public float getTurnAngle(Vector3f target);
     
 }

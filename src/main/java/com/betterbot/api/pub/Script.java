@@ -2,14 +2,12 @@ package com.betterbot.api.pub;
 
 /**
  * This is the base script class, extend this to make your scripts.
- * 
  * @author Orea
  */
 public abstract class Script {
     public BetterBot bot;
     
     /**
-     * 
      * @param bot the instance of BetterBot used to work with the game
      */
     public Script(BetterBot bot){
@@ -28,6 +26,7 @@ public abstract class Script {
     
     /**
      * Called constantly, until 0 is returned
+     * 
      * @return the amount of miliseconds to wait until running again, or 0 to stop 
      */
     public abstract int poll();

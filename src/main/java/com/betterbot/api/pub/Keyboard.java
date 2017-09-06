@@ -39,6 +39,7 @@ public interface Keyboard {
      * Press the specified key.
      *  Example input:
      *    KeyEvent.VK_SHIFT for the shift key
+     *    
      * @param key_event the KeyEvent to press
      */
     public void press(int key_event);
@@ -47,14 +48,37 @@ public interface Keyboard {
      * Release the specified key.
      *  Example input:
      *    KeyEvent.VK_SHIFT for the shift key
+     *    
      * @param key_event the KeyEvent to release
      */
     public void release(int key_event);
     
+    /**
+     * This class is used to listen for a specified key press or release
+     */
     public static interface KeyListener {
+      
+        /**
+         * This method is called on a key press
+         * 
+         * @param key the jnativehook key ID
+         * @param ckey the jnativehook key as char
+         */
         public abstract void pressed(int key, char ckey);
+        
+        /**
+         * This method is called on a key release
+         * 
+         * @param key the jnativehook key ID
+         * @param ckey the jnativehook key as char
+         */
         public abstract void released(int key, char ckey);
     }
+    
+    /**
+     * Register a KeyListener to a keyboard.
+     *  Create a KeyListener with "new KeyListener(){ //implement "pressed" and "released" here }
+     */
     public void registerKeyListener(KeyListener listener);
     
 }

@@ -13,18 +13,17 @@ public interface Command {
         
         /**
          * Called when the command is run in the dev console
+         * 
          * @param argv the arguments
          */
         public abstract void process(String argv);
         
         /**
-         * Get the command help page string
          * @return the help page string
          */
         public abstract String getHelp();
         
         /**
-         * Get the command usage
          * @return the command usage
          */
         public abstract String getUsage();
