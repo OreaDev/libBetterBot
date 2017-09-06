@@ -2,7 +2,7 @@ package com.betterbot.api.pub;
 import java.util.List;
 /**
  * This is the base BetterBot class.
- * An instance of it is handed to scripts, use this to get access to everything you need to make your script work. * 
+ * An instance of it is handed to scripts, use this to get access to everything you need to make your script work.
  * @author Orea
  */
 public interface BetterBot {
