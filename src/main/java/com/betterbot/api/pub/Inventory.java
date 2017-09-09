@@ -30,7 +30,7 @@ public interface Inventory {
     public ArrayList<Item> getItems();
     
     /**
-     * @return a list of all the items the player
+     * @return a list of all the items the player has eqipped
      */
     public ArrayList<Item> getEquipment();
     
