@@ -10,6 +10,7 @@ public interface Watcher<T> {
      * Watchable entries
      */
     public static enum Watchable {
+      
         /**
          * Unit's health value, type: Integer
          */
@@ -48,7 +49,8 @@ public interface Watcher<T> {
     }
     
     /**
-     * Fired when the desired Watchable changes.
+     * Fired when the desired Watchable changes
+     * 
      * @param newValue the new value 
      */
     public void changed(T newValue);

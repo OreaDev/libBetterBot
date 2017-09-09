@@ -14,19 +14,28 @@ public class Vector3f {
         this.player = player;
     }
     
+    /**
+     * @return the x coordinate of the vector
+     */
     public float getX() {
         return x;
     }
+
+    /**
+     * @return the y coordinate of the vector
+     */
     public float getY(){
         return y;
     }
+
+    /**
+     * @return the z coordinate of the vector
+     */
     public float getZ(){
         return z;
     }
     
     /**
-     * Returns the vector's distance to the player
-     * 
      * @return the vector's distance to the player
      */
     public float distance(){
@@ -36,7 +45,7 @@ public class Vector3f {
     public float dist(){
         return dist(player.getVector());
     }
-    
+
     public float dist(Vector3f v){
         if(v == null) return -1;
         float dx = Math.abs(x-v.x), dy = Math.abs(y-v.y), dz = Math.abs(z-v.z);
@@ -45,14 +54,16 @@ public class Vector3f {
     
     /**
      * Returns the vector's distance to the object
-     * 
      * @param obj the object
      * @return the distance to obj
      */
     public float distance(GameObject obj){
         return this.dist(obj.getVector());
     }
-    
+
+    /**
+     * @return the string representation of the vector
+     */
     @Override
     public String toString() {
         return ("Vector3f(") + x + (", ") + y + (", ") + z + (")");

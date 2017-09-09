@@ -10,6 +10,7 @@ public interface Paint {
     
     /**
      * Called each frame
+     * 
      * @param g the Graphics2D instance used for painting
      */
     abstract void paint(Graphics2D g);

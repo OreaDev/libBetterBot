@@ -4,10 +4,10 @@ import java.awt.Point;
 
 /**
  * This class is used to control the mouse.
- * 
  * @author Orea
  */
 public interface Mouse {
+  
     /**
      * Mouse over the specified object.
      * 
@@ -34,6 +34,7 @@ public interface Mouse {
      * Press the specified mouse button
      *  Example input: 
      *     MouseEvent.BUTTON1_MASK for left mouse button
+     *     
      * @param mouse_event the event ID
      */
     public void press(int mouse_event);
@@ -42,6 +43,7 @@ public interface Mouse {
      * Release the specified mouse button
      *  Example input: 
      *     MouseEvent.BUTTON1_MASK for left mouse button
+     *     
      * @param mouse_event the event ID
      */
     public void release(int mouse_event);
@@ -61,5 +63,8 @@ public interface Mouse {
      */
     public Point getPos();
 
+    /**
+     * @return the GUID of the object is mouse is over
+     */
     public long getMouseoverGUID();
 }
