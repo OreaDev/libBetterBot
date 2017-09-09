@@ -17,7 +17,7 @@ public interface Item {
     public float getDurability();
     
     /**
-     * @return the current stack size of the selected item
+     * @return the number of items in the stack
      */
     public int getStackCount();
 }
