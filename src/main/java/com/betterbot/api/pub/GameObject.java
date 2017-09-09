@@ -72,6 +72,8 @@ public interface GameObject {
 
     /**
      * Returns the type ID of this object.
+     *  1 = Item
+     *  2 = container (bag)
      *  3 = NPC
      *  4 = Player
      *  5 = World Object
@@ -135,14 +137,14 @@ public interface GameObject {
     public boolean isValid();
     
     /**
-     * @return the time in milliseconds since the spawn of the object
+     * @return the time in milliseconds since the object was loaded into memory
      */
     public long getAge();
     
     /**
-     * Get if a object is busy or in use. If a chest is opened by a player the quest is busy e.g.
+     * Get if a object is busy or in use. (Ex. if a chest is open, or if a fishing bobber is animating)
      * 
-     * @return 0 if the object is not busy, something else otherwise
+     * @return 0 if the object is not busy, something else otherwise (possibly animation ID)
      */
     public int getBusyStatus();
     
