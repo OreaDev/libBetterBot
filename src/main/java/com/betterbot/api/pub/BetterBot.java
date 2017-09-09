@@ -23,8 +23,8 @@ public interface BetterBot {
     
     /**
      * Returns the currently loaded GUIDs. 
-     *  These are used to reference all the currently loaded objects, npcs, players, etc.
-     *  You can supply one of them to getObject/getUnit to get the relevant GameObject instance for that GUID
+     *  These are used to reference all the currently loaded objects, npcs, players, items, bags and eqipment
+     *  You can supply one of them to getObject/getUnit/getItem to get the relevant GameObject instance for that GUID
      * 
      * @return the set of GUIDs
      */
@@ -61,7 +61,7 @@ public interface BetterBot {
     public Frame getFrame(String name);
     
     /**
-     * @param guid the ID of an item
+     * @param guid the GUID of an item
      * @return the item or null if the guid is faulty
      */    
     public Item getItem(long guid);
@@ -119,7 +119,7 @@ public interface BetterBot {
     
     /**
      * Add an object watcher.
-     *  Watcher will fire whenever a new object is added (Watchable.OBJECT_ADDED)
+     *  Watcher will fire whenever a new object is added (Watchable.OBJECT_ADDED) 
      * 
      * @param w the watcher
      */
@@ -211,9 +211,9 @@ public interface BetterBot {
     public int random(int min, int max);
     
     /**
-     * Check if a world object is still loaded
+     * Check if an object is still loaded
      * 
-     * @param guid the GUID of an object
+     * @param guid the GUID of the object
      * @return true if the object is still valid (loaded), false otherwise
      */
     public boolean hasObject(long guid);
