@@ -24,10 +24,10 @@ public interface RotationSolver {
     public void pull(Unit u);
     
     /**
-     * Called when a fight ended a the bot is not in combat anymore
+     * Called when a fight ends and the bot is not in combat anymore
      * 
      * @param u the last unit the bot killed
-     * @return true if the bot should wait before walking, false if the bot should move on
+     * @return true if combatEnd should be called again before continuing, false if the bot should continue
      */
     public boolean combatEnd(Unit u);
     
