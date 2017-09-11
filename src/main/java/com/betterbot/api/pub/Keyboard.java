@@ -81,4 +81,11 @@ public interface Keyboard {
      */
     public void registerKeyListener(KeyListener listener);
     
+    /**
+     * Check if the bot is currently pressing the specified key
+     * @param key the key to check
+     * @return true if the key is being pressed by the bot
+     */
+    public boolean isKeyDown(char key);
+    
 }
