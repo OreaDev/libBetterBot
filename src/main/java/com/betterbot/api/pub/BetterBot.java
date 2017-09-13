@@ -225,4 +225,26 @@ public interface BetterBot {
      */
     public String getUIError();
     
+    public static interface UIErrorListener {
+        /**
+         * Called whenever a UIError happens
+         * @param message the error
+         */
+        public void error(String message);
+    }
+    
+    /**
+     * Register a listener that fires whenever a UIError happens 
+     *
+     * @param listener the listener instance to register
+     */
+    public void registerUIErrorListener(UIErrorListener listener);
+    
+    /**
+     * Un-registers a UIErrorListener
+     * 
+     * @param listener the listener instance to un-register
+     */
+    public void unregisterUIErrorListener(UIErrorListener listener);
+    
 }
