@@ -22,6 +22,14 @@ public interface BetterBot {
     public Keyboard getKeyboard();
     
     /**
+     * Returns the Database instance, used for querying useful game related information
+     * 
+     * @return the instance of Database
+     */
+    public Database getDatabase();
+    
+    
+    /**
      * Returns the currently loaded GUIDs. 
      *  These are used to reference all the currently loaded objects, npcs, players, items, bags and eqipment
      *  You can supply one of them to getObject/getUnit/getItem to get the relevant GameObject instance for that GUID
