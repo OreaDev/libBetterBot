@@ -43,4 +43,6 @@ public interface Frame {
      * @return the contents
      */
     public String getContents();
+    
+    public void mouseOver();
 }
