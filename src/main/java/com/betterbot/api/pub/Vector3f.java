@@ -45,11 +45,21 @@ public class Vector3f {
     public float dist(){
         return dist(player.getVector());
     }
+    
+    public float dist3D(){
+        return dist3D(player.getVector());
+    }
 
     public float dist(Vector3f v){
         if(v == null) return -1;
+        float dx = Math.abs(x-v.x), dy = Math.abs(y-v.y);
+        return (float) Math.sqrt(dx*dx+dy*dy);
+    }
+    
+    public float dist3D(Vector3f v){
+        if(v == null) return -1;
         float dx = Math.abs(x-v.x), dy = Math.abs(y-v.y), dz = Math.abs(z-v.z);
-        return (float) Math.sqrt(dx*dx+dy*dy/*+dz*dz*/);
+        return (float) Math.sqrt(dx*dx+dy*dy+dz*dz);
     }
     
     /**
