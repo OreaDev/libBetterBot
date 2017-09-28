@@ -13,6 +13,11 @@ public interface Database {
         OBJECT
     }
     
+    public static class FlightMaster {
+        public Vector3f location; 
+        public String name;
+    }
+    
     public ArrayList<Vector3f> getSpawns(Type t, int ... ids);
     public ArrayList<Vector3f> getSpawns(Type t, String ... names);
     
@@ -24,5 +29,12 @@ public interface Database {
     public int getID(Type t, String name);
     public String getName(Type t, int id);
     /* not yet implemented */
+    
+    public FlightMaster getNearestFlightMaster();
+    
+    /**
+    * Get the internal DBC taxi ID for the given target name
+    */
+    public int getFlightIDForName(String name);
     
 }
