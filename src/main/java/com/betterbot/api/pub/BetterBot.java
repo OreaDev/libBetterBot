@@ -255,4 +255,11 @@ public interface BetterBot {
      */
     public void unregisterUIErrorListener(UIErrorListener listener);
     
+    /**
+     * Get the current game tooltip contents
+     * 
+     * @returns the current tooltip contents, lines separated by \n
+     */
+    public String getTooltip();
+    
 }
