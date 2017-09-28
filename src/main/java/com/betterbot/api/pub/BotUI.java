@@ -1,7 +1,7 @@
 package com.betterbot.api.pub;
 
 import java.awt.Point;
-import javax.swing.JPanel;
+import javax.swing.JComponent;
 
 /**
  * This class is used to interact with the bot UI, and to add new components to it
@@ -23,7 +23,7 @@ public interface BotUI {
      * @param title the title of the window
      * @param panel the window
      */
-    public void addWindow(String title, JPanel panel);
+    public void addWindow(String title, JComponent panel);
     
     /**
      * Add a tab to the main bot window
@@ -31,21 +31,21 @@ public interface BotUI {
      * @param title the tab title
      * @param panel the tab
      */
-    public void addTab(String title, JPanel panel);
+    public void addTab(String title, JComponent panel);
     
     /**
      * Remove a tab from the main bot window
      * 
      * @param panel the tab to remove
      */
-    public void removeTab(JPanel panel);
+    public void removeTab(JComponent panel);
     
     /**
      * Remove a window from the overlay
      * 
      * @param panel the window to remove
      */
-    public void removeWindow(JPanel panel);
+    public void removeWindow(JComponent panel);
     
     /**
      * Remove a paint from the specified layer
