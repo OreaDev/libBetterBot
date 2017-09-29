@@ -34,6 +34,8 @@ public interface Database {
     
     /**
     * Get the internal DBC taxi ID for the given target name
+    *
+    * @return the flight ID (used by Movement.enableFlightPaths)
     */
     public int getFlightIDForName(String name);
     
