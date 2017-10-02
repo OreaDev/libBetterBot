@@ -262,4 +262,11 @@ public interface BetterBot {
      */
     public String getTooltip();
     
+    /**
+     * Get the player's current combo points (Rogue/druid)
+     * 
+     * @returns the number of combopoints the current target has
+     */
+    public int getComboPoints();
+    
 }
