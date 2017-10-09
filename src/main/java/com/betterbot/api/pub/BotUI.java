@@ -66,12 +66,31 @@ public interface BotUI {
     public Point translate(float x, float y, float z);
     
     /**
+     * Translate the specified world coordiantes into 2D on-screen for rendering
+     * 
+     * @param x the x coordiante
+     * @param y the y coordiante
+     * @param z the z coordiante
+     * @param checkDotProduct if the calculation should check the dot product and return (-1, -1) if the vector is offscreen
+     * @return the 2D on-screen point
+     */
+    public Point translate(float x, float y, float z, boolean checkDotProduct);
+    
+    /**
      * Translate the specified vector into 2D on-screen for rendering
      * 
      * @param v the vector to translate
      * @return the 2D on-screen point
      */
     public Point translate(Vector3f v);
+    
+    /**
+     * Translate the specified vector into 2D on-screen for rendering
+     * @param v the vector to translate
+     * @param checkDotProduct if the calculation should check the dot product and return (-1, -1) if the vector is offscreen
+     * @return the 2D on-screen point
+     */
+    public Point translate(Vector3f v, boolean checkDotProduct);
     
     /**
      * Draws a string in the BetterBot font
