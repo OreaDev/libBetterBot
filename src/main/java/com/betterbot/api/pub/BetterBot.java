@@ -269,4 +269,13 @@ public interface BetterBot {
      */
     public int getComboPoints();
     
+    /**
+     * Attempt to buy the specified item from the current vendor
+     * 
+     * @param itemName the name of the item to buy
+     * @param times the amount of times to buy the item
+     * @return if the bot was able to buy the items
+     */
+    public boolean buyItem(String itemName, int times);
+    
 }
