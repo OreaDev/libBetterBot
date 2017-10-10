@@ -45,4 +45,20 @@ public interface RotationSolver {
      * @param u the unit that the bot is approaching
      */
     public void approaching(Unit u);
+  
+    /**
+     * Called to check if the bot should walk to a special vendor
+     *
+     * @return the target vendor, or null
+     */
+    public Database.Vendor getVendor(); 
+  
+    /**
+     * Called when the bot is at a vendor
+     *
+     * @param vendor the Vendor the bot is currently interacting with
+     * @return if the bot should continue waiting at the vendor
+     */
+    public boolean atVendor(Database.Vendor vendor);
+  
 }
