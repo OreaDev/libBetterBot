@@ -61,4 +61,11 @@ public interface RotationSolver {
      */
     public boolean atVendor(Database.Vendor vendor);
   
+    /**
+     * Called after the bot resurrects
+     * 
+     * @return if the bot should keep waiting and calling afterResurrect();
+     */
+    public boolean afterResurrect();
+  
 }
