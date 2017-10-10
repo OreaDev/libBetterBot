@@ -19,7 +19,7 @@ public interface Database {
     }
     
     public static class Vendor {
-        public Vector3f position;
+        public Vector3f location;
         public String name;
         public boolean food, ammo, repair, poison, reagent;
     }
