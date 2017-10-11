@@ -48,6 +48,13 @@ public interface RotationSolver {
     public void approaching(Unit u);
   
     /**
+     * Called when the bot is about to walk a distance in search of new targets
+     *
+     * @param travelTarget the vector the bot is travelling to
+     */
+    public boolean prepareForTravel(Vector3f travelTarget);
+  
+    /**
      * Called to check if the bot should walk to a special vendor
      *
      * @return the target vendor, or null
