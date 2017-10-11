@@ -75,4 +75,13 @@ public interface RotationSolver {
      */
     public boolean beforeInteract();
   
+    /**
+     * Called to get the rotation's UI, or null if there is none
+     *  Note: make sure to do ui.setName("Something") before you return it here,
+     *        otherwise your tab will have the default name "Rotation Settings"
+     *
+     * @return the UI, or null 
+     */
+    public JComponent getUI();
+  
 }
