@@ -68,4 +68,11 @@ public interface RotationSolver {
      */
     public boolean afterResurrect();
   
+    /**
+     * Called when the bot is about to interact with an object or NPC
+     * 
+     * @return if the bot should continue waiting
+     */
+    public boolean beforeInteract();
+  
 }
