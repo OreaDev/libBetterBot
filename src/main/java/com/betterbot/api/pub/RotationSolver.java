@@ -1,6 +1,7 @@
 package com.betterbot.api.pub;
 
 import com.betterbot.api.pub.Unit;
+import javax.swing.JComponent;
 
 /**
  * This class is to provide the basic methods for a rotation profile.
