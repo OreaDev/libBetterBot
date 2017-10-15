@@ -41,4 +41,12 @@ public interface Inventory {
      * @return the counted value of all IDs given
      */
     public int getItemCount(int ... ids);
+  
+    /**
+     * Attempt to click on an inventory item
+     * @param name the name of the item
+     * @return if the bot was able to click the item (left click)
+     */
+    public boolean clickItem(String name);
+  
 }
