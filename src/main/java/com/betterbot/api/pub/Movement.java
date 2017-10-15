@@ -143,4 +143,11 @@ public interface Movement {
      */
     public float getTurnAngle(Vector3f target);
     
+    /**
+     * Set if the bot should walk backwards
+     * 
+     * @param walkBackwards if the bot should walk backwards
+     */
+    public void setWalkBackwards(boolean walkBackwards);
+    
 }
