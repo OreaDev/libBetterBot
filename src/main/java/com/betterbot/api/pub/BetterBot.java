@@ -278,4 +278,14 @@ public interface BetterBot {
      */
     public boolean buyItem(String itemName, int times);
     
+    /**
+     * Get the game version
+     * 
+     *  5875 = vanilla, 8606 = TBC  
+     * 
+     * @return the game version
+     */
+    public int getGameVersion();
+    
+    
 }
