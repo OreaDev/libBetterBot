@@ -279,6 +279,15 @@ public interface BetterBot {
     public boolean buyItem(String itemName, int times);
     
     /**
+     * Attempt to open the vendor window by clicking the specified unit
+     *   This method will also walk through dialogue options like "I would like to browse your goods"
+     * 
+     * @param vendor the vendor to open
+     * @return if the bot was able to open the vendor window
+     */
+    public boolean openVendor(Unit vendor);
+    
+    /**
      * Get the game version
      * 
      *  5875 = vanilla, 8606 = TBC  
