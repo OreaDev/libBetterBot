@@ -43,6 +43,14 @@ public interface Inventory {
     public int getItemCount(int ... ids);
   
     /**
+     * Get the amount of one item in the inventory or the sum of multiple items
+     * 
+     * @param names one or more item names
+     * @return the counted value of all items
+     */
+    public int getItemCount(String ... names);
+  
+    /**
      * Attempt to click on an inventory item
      * @param name the name of the item
      * @return if the bot was able to click the item (left click)
