@@ -58,6 +58,13 @@ public interface Inventory {
     public boolean clickItem(String name);
   
     /**
+     * Attempt to right click on an inventory item
+     * @param name the name of the item
+     * @return if the bot was able to click the item (left click)
+     */
+    public boolean rightClickItem(String name);
+  
+    /**
      * Get the bag/slot ID for the specified item
      * 
      * @param id the item id
