@@ -57,4 +57,20 @@ public interface Inventory {
      */
     public boolean clickItem(String name);
   
+    /**
+     * Get the bag/slot ID for the specified item
+     * 
+     * @param id the item id
+     * @return Point representing a bag slot containing the item, or null. (x=bag, y=slot)
+     */
+    public Point getItemBagSlot(int id);
+    
+    /**
+     * Get the bag/slot ID for the specified item
+     * 
+     * @param name the item name
+     * @return Point representing a bag slot containing the item, or null. (x=bag, y=slot)
+     */
+    public Point getItemBagSlot(String name);
+  
 }
