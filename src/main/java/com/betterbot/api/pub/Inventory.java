@@ -87,4 +87,12 @@ public interface Inventory {
      */
     public Point getItemBagSlot(String name);
   
+    /**
+     * Get the item name for the specified ID
+     *
+     * @param id the item ID
+     * @return the item name, or null if the ID is invalid
+     */
+    public String getItemName(int id);
+  
 }
