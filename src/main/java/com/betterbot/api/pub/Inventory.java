@@ -1,6 +1,7 @@
 package com.betterbot.api.pub;
 
 import java.util.ArrayList;
+import java.awt.Point;
 
 /**
  * This is the Inventory class.
